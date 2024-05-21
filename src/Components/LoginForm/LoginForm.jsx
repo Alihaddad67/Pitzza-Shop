@@ -33,8 +33,9 @@ export const LoginForm = () => {
   };
 
   return (
-    <div className="wrapper">
-      <form onSubmit={handleSubmit}>
+    <div className="login-page">
+     <div className="wrapper ">
+       <form onSubmit={handleSubmit}>
         <h1>Login</h1>
         <div className="input-box">
           <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required />
@@ -62,6 +63,7 @@ export const LoginForm = () => {
         </div>
 
       </form>
+     </div>
     </div>
   );
 };
