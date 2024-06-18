@@ -15,8 +15,8 @@ function App() {
     <div className="App">
       <ShopContextProvider>
         <Router>
-          <CustomNav />
           <AuthProvider>
+            <CustomNav />
             <Routes>
               <Route path="/" element={<UnProtectedRoute><LoginForm /></UnProtectedRoute>} />
               <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />

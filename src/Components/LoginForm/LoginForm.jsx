@@ -10,7 +10,7 @@ export const LoginForm = () => {
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const { login } = useAuth();
-
+  const navigate = useNavigate();
   
   const handleSubmit = (e) => {
     e.preventDefault();

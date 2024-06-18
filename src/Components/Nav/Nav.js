@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
-import { Nav, Navbar } from "react-bootstrap";
+import {  Nav, Navbar } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart ,faHouse } from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart, faHouse } from "@fortawesome/free-solid-svg-icons";
+import { BsBoxArrowRight } from "react-icons/bs";
+
+import { useAuth } from "../Hooks/useAuth";
 
 
 export const CustomNav = () => {
+  const { logout} = useAuth();
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <div className="container">
@@ -21,6 +25,7 @@ export const CustomNav = () => {
             <Link to="/Werbkorb" className="nav-link text-light">
               <FontAwesomeIcon icon={faShoppingCart} />
             </Link>
+            <BsBoxArrowRight className="mx-2 my-auto " style={{ fontSize: '1.5rem' , cursor: 'pointer'  }}  onClick={logout}/>
           </Nav>
         </Navbar.Collapse>
       </div>
