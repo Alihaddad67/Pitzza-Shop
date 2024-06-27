@@ -109,3 +109,19 @@
   
  }
 
+
+ .wrapper .regester-link1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.regester-link1 a {
+  color: yellow;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.regester-link1 a:hover {
+  text-decoration: underline;
+}

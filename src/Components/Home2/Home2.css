@@ -1,0 +1,255 @@
+/* body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .home2 {
+    text-align: center;
+    background: url('../Asset/4_Thursday.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+  }
+  
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-item {
+    margin-left: 2rem;
+  }
+  
+  .navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .navbar-link:hover {
+    text-decoration: underline;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    padding-top: 60px;
+  }
+  
+  .header-content {
+    text-align: left;
+    color: black;
+  }
+  
+  .header-title {
+    font-size: 2.5rem;
+    animation: fadeInOut 3.2s infinite;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+   */
+
+
+/* 
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+.home2 {
+    text-align: center;
+    background: url('../Asset/4_Thursday.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin-left: 2rem;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+}
+
+
+.header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    padding-top: 60px;
+    position: relative;
+}
+
+.header-content {
+    text-align: left;
+    color: black;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    animation: fadeInOut 10s infinite;
+    position: absolute; 
+    left: 10%;
+    color: black;
+}
+
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    20%, 80% { opacity: 1; }
+} */
+
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin-left: 2rem;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+}
+
+.home2-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 4rem); /* تمام ارتفاع صفحه را پوشش دهید، بجز ارتفاع نوار ناوبری */
+    top: 4rem; /* موقعیت از بعد از نوار ناوبری شروع شود */
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Asset/4_Thursday.jpg'); /* مسیر تصویر پس‌زمینه */
+    background-size: cover;
+    background-position: center;
+    opacity: 1; /* اختیاری: شفافیت تصویر پس‌زمینه */
+    z-index: -1; /* پس‌زمینه را به پشت بقیه محتوا قرار دهید */
+}
+
+.text-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 20px; /* فاصله از سمت چپ */
+    transform: translateY(-50%);
+    width: 40%; /* عرض متن‌ها */
+}
+
+.animated-text {
+    position: absolute; /* متن‌ها در موقعیت ثابت */
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 20px;
+}

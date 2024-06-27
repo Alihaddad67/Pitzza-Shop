@@ -42,45 +42,138 @@
 // };
 
 
+// import { useAuth } from './../Hooks/useAuth.jsx';
+// import p1 from '../Asset/p1.jpg';
+// import p2 from '../Asset/p2.jpeg';
+// import p3 from '../Asset/p3.jpg';
+// import './home.css'; // اضافه کردن CSS
+
+// export const Home = () => {
+//     const { logout, user } = useAuth();
+//     console.log(user);
+//     return (
+//         <div>
+//             <h1>This is Home {user.firstName}</h1>
+//             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="3000">
+//                 <ol className="carousel-indicators">
+//                     <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+//                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+//                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+//                 </ol>
+//                 <div className="carousel-inner">
+//                     <div className="carousel-item active">
+//                         <img className="d-block carousel-image" src={p1} alt="First slide" />
+//                     </div>
+//                     <div className="carousel-item">
+//                         <img className="d-block carousel-image" src={p2} alt="Second slide" />
+//                     </div>
+//                     <div className="carousel-item">
+//                         <img className="d-block carousel-image" src={p3} alt="Third slide" />
+//                     </div>
+//                 </div>
+//                 <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+//                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+//                     <span className="sr-only">Previous</span>
+//                 </a>
+//                 <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+//                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
+//                     <span className="sr-only">Next</span>
+//                 </a>
+//             </div>
+//             <button className="btn btn-outline-secondary" onClick={logout}>LogOut</button>
+//         </div>
+//     );
+// };
+
+
+
+
+
+import React from 'react';
 import { useAuth } from './../Hooks/useAuth.jsx';
 import p1 from '../Asset/p1.jpg';
 import p2 from '../Asset/p2.jpeg';
 import p3 from '../Asset/p3.jpg';
-import './home.css'; // اضافه کردن CSS 
+import './home.css';
+import { useNavigate } from 'react-router-dom';
+
 
 export const Home = () => {
-    const { logout, user } = useAuth();
-    console.log(user);
+    const { logout,user  } = useAuth();
+    const navigate = useNavigate();
+
+
+    const handelLoginClick = () => {
+        navigate('/')
+    }
     return (
         <div>
-            <h1>This is Home {user.firstName}</h1>
-            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="3000">
-                <ol className="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img className="d-block carousel-image" src={p1} alt="First slide" />
+            {user ? (
+                <div>
+                    <h1>This is Home {user.firstName}</h1>
+                    <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="3000">
+                        <ol className="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div className="carousel-inner">
+                            <div className="carousel-item active">
+                                <img className="d-block carousel-image" src={p1} alt="First slide" />
+                            </div>
+                            <div className="carousel-item">
+                                <img className="d-block carousel-image" src={p2} alt="Second slide" />
+                            </div>
+                            <div className="carousel-item">
+                                <img className="d-block carousel-image" src={p3} alt="Third slide" />
+                            </div>
+                        </div>
+                        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="sr-only">Previous</span>
+                        </a>
+                        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="sr-only">Next</span>
+                        </a>
                     </div>
-                    <div className="carousel-item">
-                        <img className="d-block carousel-image" src={p2} alt="Second slide" />
-                    </div>
-                    <div className="carousel-item">
-                        <img className="d-block carousel-image" src={p3} alt="Third slide" />
+                    <button className="btn btn-outline-secondary" onClick={logout}>LogOut</button>
+                </div>
+            ) : (
+                <div>
+                    <div>
+                    <h1>This is Homepage</h1>
+                    <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="3000">
+                        <ol className="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div className="carousel-inner">
+                            <div className="carousel-item active">
+                                <img className="d-block carousel-image" src={p1} alt="First slide" />
+                            </div>
+                            <div className="carousel-item">
+                                <img className="d-block carousel-image" src={p2} alt="Second slide" />
+                            </div>
+                            <div className="carousel-item">
+                                <img className="d-block carousel-image" src={p3} alt="Third slide" />
+                            </div>
+                        </div>
+                        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="sr-only">Previous</span>
+                        </a>
+                        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="sr-only">Next</span>
+                        </a>
                     </div>
                 </div>
-                <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
-                </a>
-                <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
-                </a>
-            </div>
-            <button className="btn btn-outline-secondary" onClick={logout}>LogOut</button>
+                     <button className="btn btn-outline-secondary" onClick={handelLoginClick}>Login</button>
+                </div>
+            )}
         </div>
     );
 };
+
