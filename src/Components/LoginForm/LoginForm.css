@@ -6,7 +6,7 @@
   justify-content: center ;
   align-items: center;
   min-height: 100vh;
-  background: url(../Asset/classic-italian-pepperoni-pizza-with-onion-plate-top-view-high-quality-photo_275899-644.jpg) no-repeat;
+  background: url(../Asset/pitzza-3.jpg) no-repeat;
   background-size: cover;
   background-position: center;
  
@@ -124,4 +124,15 @@
 
 .regester-link1 a:hover {
   text-decoration: underline;
+}
+
+/* اضافه کردن برخی استایل‌ها برای تنظیم نمایش هشدار */
+.alert {
+  /* background-color: rgba(255, 0, 0, 0.2);
+  color: #ff0000; */
+
+  border-radius: 10px;
+  padding: 10px;
+  margin: 50px 0;
+  font-size: 20px;
 }

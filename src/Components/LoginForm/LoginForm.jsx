@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./LoginForm.css";
 import { FaUser, FaLock } from "react-icons/fa";
-import { redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "./../Hooks/useAuth.jsx";
 
 export const LoginForm = () => {
@@ -13,11 +13,6 @@ export const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // const res = await = axios.post("/login", {
-    //   username,
-    //   password
-    // })
 
     if (username === "Ali" && password === "1234") {
       console.log("Login successful!");
@@ -34,7 +29,7 @@ export const LoginForm = () => {
 
   return (
     <div className="login-page">
-      <div className="wrapper ">
+      <div className="wrapper">
         <form onSubmit={handleSubmit}>
           <h1>Login</h1>
           <div className="input-box">
@@ -58,7 +53,11 @@ export const LoginForm = () => {
             <FaLock className="icon" />
           </div>
 
-          <div className="error-message">{errorMessage}</div>
+          {errorMessage && (
+            <div className="alert alert-danger text-danger d-flex align-items-center" role="alert">
+              <div>{errorMessage}</div>
+            </div>
+          )}
 
           <div className="remmber-forget">
             <label>

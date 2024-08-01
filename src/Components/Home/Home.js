@@ -96,10 +96,10 @@ import p2 from '../Asset/p2.jpeg';
 import p3 from '../Asset/p3.jpg';
 import './home.css';
 import { useNavigate } from 'react-router-dom';
-
+import {CustomNav} from '../Nav/Nav.js'
 
 export const Home = () => {
-    const { logout,user  } = useAuth();
+    const { logout, user } = useAuth();
     const navigate = useNavigate();
 
 
@@ -110,8 +110,9 @@ export const Home = () => {
         <div>
             {user ? (
                 <div>
+                    <CustomNav />
                     <h1>This is Home {user.firstName}</h1>
-                    <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="3000">
+                    <div id="carouselExampleIndicators" className="carousel slide my-5 mt-5" data-ride="carousel" data-interval="3000">
                         <ol className="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -142,35 +143,36 @@ export const Home = () => {
             ) : (
                 <div>
                     <div>
-                    <h1>This is Homepage</h1>
-                    <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="3000">
-                        <ol className="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <img className="d-block carousel-image" src={p1} alt="First slide" />
+                        <h1>This is Homepage</h1>
+                        <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="3000">
+                            <ol className="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div className="carousel-inner">
+                                <div className="carousel-item active">
+                                    <img className="d-block carousel-image" src={p1} alt="First slide" />
+                                </div>
+                                <div className="carousel-item">
+                                    <img className="d-block carousel-image" src={p2} alt="Second slide" />
+                                </div>
+                                <div className="carousel-item">
+                                    <img className="d-block carousel-image" src={p3} alt="Third slide" />
+                                </div>
+
                             </div>
-                            <div className="carousel-item">
-                                <img className="d-block carousel-image" src={p2} alt="Second slide" />
-                            </div>
-                            <div className="carousel-item">
-                                <img className="d-block carousel-image" src={p3} alt="Third slide" />
-                            </div>
+                            <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span className="sr-only">Previous</span>
+                            </a>
+                            <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span className="sr-only">Next</span>
+                            </a>
                         </div>
-                        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span className="sr-only">Previous</span>
-                        </a>
-                        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span className="sr-only">Next</span>
-                        </a>
                     </div>
-                </div>
-                     <button className="btn btn-outline-secondary" onClick={handelLoginClick}>Login</button>
+                    <button className="btn btn-outline-secondary" onClick={handelLoginClick}>Login</button>
                 </div>
             )}
         </div>

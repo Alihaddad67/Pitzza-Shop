@@ -21,7 +21,7 @@ function App() {
           <AuthProvider>
             <Routes>
               <Route element={<PublicLayout />}>
-                <Route path="/home1" element={<Home />} />
+                <Route path="/home" element={<Home />} />
                 <Route path="/home2" element={<Home2 />} />
                 <Route path="/" element={<UnProtectedRoute><LoginForm /></UnProtectedRoute>} />
               </Route>

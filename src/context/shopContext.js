@@ -14,14 +14,16 @@ export const ShopContextProvider = (props) => {
 
     const quantity = (itemId) => {
         const item = cartItems.find((item) => item.id === itemId);
-        const count = item?.count;
+        return item ? item.count : 0;
+        // const count = item?.count;
 
-        if (count === undefined) {
-            return 0;
-        } else {
-            return count;
-        }
+        // if (quantity === undefined) {
+        //     return 0;
+        // } else {
+        //     return quantity;
+        // }
     };
+
     const addToCart = (itemId) => {
         if (!cartItems.find((item) => item.id === itemId))
             setCartItems([...cartItems, { id: itemId, count: 1 }])
@@ -41,14 +43,14 @@ export const ShopContextProvider = (props) => {
         }))
     }
 
-        const deletFromCart = (itemId) => {
-            setCartItems(cartItems.filter((item)=> {
-    return item.id !==itemId
-}))
-      }
+    const deletFromCart = (itemId) => {
+        setCartItems(cartItems.filter((item) => {
+            return item.id !== itemId
+        }))
+    }
 
-const contextValue = { cartItems, addToCart, removeFromCart, quantity }
-return <ShopContext.Provider value={contextValue}>{props.children}</ShopContext.Provider>
+    const contextValue = { cartItems, addToCart, removeFromCart, quantity, deletFromCart }
+    return <ShopContext.Provider value={contextValue}>{props.children}</ShopContext.Provider>
 
 
 }

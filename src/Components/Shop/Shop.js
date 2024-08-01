@@ -11,11 +11,12 @@ export const Shop = () => {
 
   return (
     <React.Fragment>
-      <h1 className="text-center">This is Shop Page{user.firstName}</h1>
-      <div className="row">
-        {Products.map((productData) => {
-          return <ProductList key={productData.id} data={productData} />
-        })}
+      <div className="container mt-5 pt-5">
+        <div className="row">
+          {Products.map((productData) => {
+            return <ProductList key={productData.id} data={productData} />
+          })}
+        </div>
       </div>
     </React.Fragment>
   );

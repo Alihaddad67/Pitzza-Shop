@@ -6,10 +6,10 @@ export const Products = [
         productName: 'Margarita',
         detail: 'Tomatet , Motarela',
         price: 1000,
-        productimage: pitzza 
+        productimage: pitzza
     },
     {
-                  id: 2,
+        id: 2,
         productName: 'salami',
         detail: 'xxxxxxxxxxxxxxx',
         price: 1200,
@@ -40,14 +40,14 @@ export const Products = [
         id: 8,
         productName: 'm9',
         detail: 'xxxxxxxxxxxxxxx',
-        price: "1000",
+        price: 1000,
         productimage: pitzza
     },
     {
         id: 10,
         productName: 'm11',
         detail: 'xxxxxxxxxxxxxxx',
-        price: "1400",
+        price: 1400,
         productimage: pitzza
     },
     {
