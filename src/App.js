@@ -2,17 +2,18 @@
 
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { WerbKorb } from './Components/WerbKorb/WerbKorb';
-import { Home } from './Components/Home/Home';
-import { LoginForm } from './Components/LoginForm/LoginForm';
-import { AuthProvider } from "./Components/Utils/AuthProvider.jsx";
-import { ProtectedRoute } from "./Components/Utils/ProtectedRoute.jsx";
-import { UnProtectedRoute } from "./Components/Utils/UnProtectedRoute.jsx";
-import { Shop } from './Components/Shop/Shop.js';
+import { WerbKorb } from './views/WerbKorb/WerbKorb.js';
+import { Home } from './views/Home/Home.js';
+import { LoginForm } from './views/LoginForm/LoginForm.jsx';
+import { AuthProvider } from "./Utils/AuthProvider.jsx";
+import { ProtectedRoute } from "./Utils/ProtectedRoute.jsx";
+import { UnProtectedRoute } from "./Utils/UnProtectedRoute.jsx";
+import { Shop } from './views/Shop/Shop.js';
 import { ShopContextProvider } from './context/shopContext.js';
-import { PublicLayout } from "./Components/Layout/PublicLayout.js";
-import { PrivateLayout } from "./Components/Layout/privatlayout.js";
-import { Home2 } from './Components/Home2/Home2.js'
+import { PublicLayout } from "./components/Layout/PublicLayout.js";
+import { PrivateLayout } from "./components/Layout/privatlayout.js";
+import { Home2 } from './views/Home2/Home2.js'
+import { Home3 } from './views/Home3/Home3.js';
 function App() {
   return (
     <div className="App">
@@ -23,6 +24,7 @@ function App() {
               <Route element={<PublicLayout />}>
                 <Route path="/home" element={<Home />} />
                 <Route path="/home2" element={<Home2 />} />
+                <Route path="/home3" element={<Home3/>} />
                 <Route path="/" element={<UnProtectedRoute><LoginForm /></UnProtectedRoute>} />
               </Route>
 

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useAuth } from './../Hooks/useAuth.jsx'
+import { useAuth } from '../Hooks/useAuth.jsx'
 import { Products } from '../../Data/Product.js';
 import { ShopContext } from '../../context/shopContext.js';
 import { ProductList } from '../Shop/ProductList.js';
@@ -14,12 +14,15 @@ export const WerbKorb = () => {
         const product = Products.find(product  => product.id === item.id);
         return total + (product ? product.price * item.count : 0);
     }, 0);
+    const cartItemExist = cartItems.some(item => item.count > 0);
+
 
     return (
         <React.Fragment>
             {/* <div>This is WerbKorb for: {user.firstName}</div> */}
             <div className='row'>
-                {Products.map((product) => {
+            { cartItemExist ? (
+                Products.map((product) => {
                     const cartItem = cartItems.find((item) => item.id === product.id && item.count > 0);
                     if (cartItem) {
                         return (
@@ -30,8 +33,14 @@ export const WerbKorb = () => {
                             </div>
                         );
                     }
-                    return null;
-                })}
+                    return null
+        
+                })
+                ) : (
+                    <div className='col-12 text-center'>
+                        <h3>gibt es keine</h3>
+                    </div>   
+               ) }
                 <div className="col-12 text-center">
                     <p>Total: {totalPrice}</p>
                 </div>

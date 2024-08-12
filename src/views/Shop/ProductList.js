@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Button, OverlayTrigger, Popover } from "react-bootstrap";
 import { ShopContext } from "../../context/shopContext";
+import './shop.css';
 
 export const ProductList = (props) => {
   const { id, productimage, productName, price, detail } = props.data;
@@ -17,7 +18,7 @@ export const ProductList = (props) => {
 
   return (
     <div className="col-12 col-md-6 col-lg-3 mx-auto mb-3 d-flex justify-content-center">
-      <div className="card h-100" style={{ width: '18rem' }}>
+      <div className="card ch2 h-100" style={{ width: '18rem' }}>
         <OverlayTrigger
           trigger={["hover"]}
           placement="right"
@@ -26,7 +27,7 @@ export const ProductList = (props) => {
         >
           <img src={productimage} className="card-img-top" alt={productName} />
         </OverlayTrigger>
-        <div className="card-body bg-secondary text-center  ">
+        <div className="card-body cb2 bg-secondary text-center  ">
           <h5 className="card-title ">{productName}</h5>
           <p className="card-text ">Price: {price}</p>
           <div className="d-flex flex-column align-items-center mb-3">
@@ -37,13 +38,15 @@ export const ProductList = (props) => {
                   <span className="mx-1">{itemCount}</span>
                   <button className="btn btn-sm btn-primary mx-1" onClick={() => removeFromCart(id)}>-</button>
                 </div>
-                <button className="btn btn-sm btn-light mt-2" onClick={() => deletFromCart(id)}>Delete</button>
-              
+                <div >
+                  <button className="btn btn-sm btn-light mx-1 ml-auto " onClick={() => deletFromCart(id)}>x</button>
+                </div>
+             
           </>
           ) : (
           <Button
             onClick={() => addToCart(id)}
-            className="btn btn-outline-primary text-white"
+            className="btn btn-sm  btn-outline-primary text-white"
           >
             Add to werbkorb
           </Button>

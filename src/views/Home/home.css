@@ -1,0 +1,155 @@
+/* home.css */
+
+/* .carousel {
+  width: 600px;
+  height: 300px;
+  margin: 0 auto; 
+
+.carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+} */
+
+/* home.css */
+/* edit dovom */
+/* 
+.carousel {
+  width: 600px;
+  height: 300px;
+  margin: 0 auto; 
+}
+
+.carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section {
+  margin: 30px 0;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+} */
+
+
+/* home.css */
+.carousel {
+  width: 600px;
+  height: 300px;
+  margin: 0 auto; /* برای وسط قرار دادن کاروسل */
+}
+
+.carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* برای تنظیم تصاویر به اندازه کانتینر بدون برش */
+}
+
+.section {
+  margin: 30px 0;
+}
+ .ch1 {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+
+
+.ch1 {
+  margin: 10px 0px 10px 60px; /* kam kardan margin baraye kochik kardan */
+  padding: 10px; /* kam kardan padding */
+  height: 170px; /* height mosha’khas baraye kam kardan tol */
+  width: 350px;
+  background-color: #b9c9c6;
+  overflow: hidden; /* jelogiri az keshide shodan matn */
+}
+
+.cit1 {
+  height: 120px; /* kam kardan height aks ha */
+  object-fit: cover; /* baraye neshoon dadane hame aks be tore dorost */
+}
+
+.card-body {
+  padding: 8px; /* padding kamtar baraye mohtavaye daroon card */
+}
+
+.card-title {
+  font-size: 1rem; /* font-size kamtar baraye title ha */
+  line-height: 1.2rem; /* line-height kamtar baraye ghadrat mohtava */
+}
+
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%; /* etminan az pahnayi kamel */
+  display: block; /* etminan az dorosti namayesh element */
+}
+
+.row {
+  display: flex;
+  justify-content: space-between; /* Baraye hamvarya alignment */
+}
+
+.col-md-4 {
+  flex: 1;
+  margin: 10px;
+}

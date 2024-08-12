@@ -1,0 +1,33 @@
+.text-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    width: 40%;
+    font-family: 'Roboto', sans-serif !important; /* Ensure ke font dorost set shode */
+  }
+  
+  .animated-text {
+    position: absolute;
+    font-size: 30px;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  
+  .text-metude {
+    font-size: 1.5rem;
+  }
+  
+  .text-color-black {
+    color: black;
+  }
+  
+  .hover-effect {
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .hover-effect:hover {
+    color: blue;
+  }
+  

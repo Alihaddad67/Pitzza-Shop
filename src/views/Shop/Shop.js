@@ -1,5 +1,5 @@
 import React from "react";
-import { useAuth } from "../../components/Hooks/useAuth.jsx";
+import { useAuth } from "../Hooks/useAuth.jsx";
 import { Products } from "../../Data/Product.js";
 import { ProductList } from "./ProductList.js";
 

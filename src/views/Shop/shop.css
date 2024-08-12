@@ -1,0 +1,35 @@
+
+.ch2 {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.ch2 {
+ 
+  
+  padding: 10px; /* kam kardan padding */
+  height:150px; /* height mosha’khas baraye kam kardan tol */
+  width: 200px;
+  background-color: #b3ded6;
+  overflow: hidden; /* jelogiri az keshide shodan matn */
+}
+
+
+.cb2 {
+  padding: 5px 10px 0px 10px; /* Kam kardan padding zir tasvir */
+  font-size: 0.9rem; /* Kam kardan font-size baraye kutah kardan matn */
+  line-height: 1.2rem; /* Kam kardan line-height baraye kutah kardan matn */
+  height: 90px; /* Kam kardan height ta kutah-tar beshe */
+  overflow: hidden; /* Jelogiri az keshide shodan matn */
+}
+
+  
+  .card-title {
+    font-size: 0.9rem; /* Kam kardan font-size */
+    line-height: 1.1rem; /* Kam kardan line-height baraye kutah kardan matn */
+    margin-bottom: 5px; /* Kam kardan fazaye zir title */
+}
+  

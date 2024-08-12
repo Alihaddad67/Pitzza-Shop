@@ -9,7 +9,7 @@ import { ShopContext } from "../../context/shopContext";
 
 
 export const CustomNav = () => {
-  const { logout } = useAuth();
+  const { logout , user  } = useAuth();
   const  cart = useContext(ShopContext)
   const productsCount = cart.cartItems.reduce((sum , Product)=> sum + Product.count ,0) 
   return (
@@ -19,6 +19,7 @@ export const CustomNav = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
+            <p></p>
             <Link to="/Home" className="nav-link text-light">
             <FontAwesomeIcon icon={faHouse} />
             </Link>
