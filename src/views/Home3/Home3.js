@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTransition, animated } from '@react-spring/web';
 import './home3.css';
-import pitzza from '../Asset/pitzza .png';
+import pitzza from '../../assets/pitzza .png';
 
 export const Home3 = () => {
   const texts = [

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { useAuth } from '../Hooks/useAuth.jsx'
-import { Products } from '../../Data/Product.js';
+import { useAuth } from '../../hooks/useAuth.jsx'
+import { Products } from '../../data/Product.js';
 import { ShopContext } from '../../context/shopContext.js';
 import { ProductList } from '../Shop/ProductList.js';
 

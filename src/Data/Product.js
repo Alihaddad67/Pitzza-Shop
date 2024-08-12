@@ -1,4 +1,4 @@
-import pitzza from "../Components/Asset/pitzza.jpg";
+import pitzza from "../assets/pitzza.jpg";
 
 export const Products = [
     {

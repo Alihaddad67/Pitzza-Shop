@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./LoginForm.css";
 import { FaUser, FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../Hooks/useAuth.jsx";
+import { useAuth } from "../../hooks/useAuth.jsx";
 
 export const LoginForm = () => {
   const [username, setUsername] = useState("");
