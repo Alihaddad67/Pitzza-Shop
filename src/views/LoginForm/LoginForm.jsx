@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./LoginForm.css";
-import { FaUser, FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth.jsx";
 
@@ -40,7 +39,6 @@ export const LoginForm = () => {
               onChange={(e) => setUsername(e.target.value)}
               required
             />
-            <FaUser className="icon" />
           </div>
           <div className="input-box">
             <input
@@ -50,7 +48,6 @@ export const LoginForm = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <FaLock className="icon" />
           </div>
 
           {errorMessage && (
